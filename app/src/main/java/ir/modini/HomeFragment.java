@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hanks.htextview.typer.TyperTextView;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +42,22 @@ public class HomeFragment extends Fragment {
         viewPager.setPadding(280, 0, 0, 0);
         viewPager.setCurrentItem(3);
 
+        ArrayList<String> url_slider = new ArrayList<>();
+        url_slider.add("https://mrmdeveloper.ir/images/dorsa-web.jpg");
+        url_slider.add("https://mrmdeveloper.ir/images/yenichy-web.jpg");
+        url_slider.add("https://mrmdeveloper.ir/images/Wet-n-Wild-S-981017web.jpg");
+        SliderLayout mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
 
+        for (int i = 0; i < url_slider.size(); i++) {
+
+            DefaultSliderView textSliderView = new DefaultSliderView(getActivity());
+            textSliderView
+                    .image(url_slider.get(i))
+                    .setScaleType(BaseSliderView.ScaleType.Fit);
+            textSliderView.bundle(new Bundle());
+            mDemoSlider.addSlider(textSliderView);
+            mDemoSlider.willNotCacheDrawing();
+        }
         return view;
     }
 

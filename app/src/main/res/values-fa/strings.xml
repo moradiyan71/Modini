@@ -6,4 +6,6 @@
     <string name="title_notifications">هشدارها</string>
     <string name="title_settings">تنظیمات</string>
     <string name="categories">دسته بندی</string>
+    <string name="login">ورود کاربر</string>
+    <string name="register">ثبت نام کاربر</string>
 </resources>
