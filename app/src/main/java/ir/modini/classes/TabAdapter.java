@@ -4,16 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class PagerAdapter extends FragmentPagerAdapter {
+public class TabAdapter extends FragmentPagerAdapter {
     private List<Fragment> Fragment = new ArrayList<>(); //Fragment List
 
-    public PagerAdapter(@NonNull FragmentManager fm) {
+    public TabAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
+
 
     public void add(Fragment Frag) {
         Fragment.add(Frag);
@@ -27,6 +27,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 }

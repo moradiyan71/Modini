@@ -1,18 +1,29 @@
 package ir.modini;
 
-import ir.modini.classes.PagerAdapter;
+import ir.modini.classes.TabAdapter;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
+import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
+
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     BottomNavigationView navigation;
+    private Context context;
+    private static SharedPreferences Preferences, Preferences_fav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +38,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void setupFm(FragmentManager fragmentManager, ViewPager viewPager) {
-        PagerAdapter Adapter = new PagerAdapter(fragmentManager);
+        TabAdapter Adapter = new TabAdapter(fragmentManager);
         //Add All Fragment To List
         Adapter.add(new HomeFragment());
-        Adapter.add(new DashboardFragment());
-        Adapter.add(new SettingFragment());
+        Adapter.add(new SaleFragment());
+        Adapter.add(new NotificationFragment());
+        Adapter.add(new ShopFragment());
         Adapter.add(new SettingFragment());
         viewPager.setAdapter(Adapter);
     }
@@ -44,14 +56,17 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     viewPager.setCurrentItem(0);
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.navigation_sale:
                     viewPager.setCurrentItem(1);
                     return true;
                 case R.id.navigation_notifications:
                     viewPager.setCurrentItem(2);
                     return true;
-                case R.id.navigation_settings:
+                case R.id.navigation_shop:
                     viewPager.setCurrentItem(3);
+                    return true;
+                case R.id.navigation_settings:
+                    viewPager.setCurrentItem(4);
                     return true;
             }
             return false;
@@ -70,12 +85,15 @@ public class MainActivity extends AppCompatActivity {
                     navigation.setSelectedItemId(R.id.navigation_home);
                     break;
                 case 1:
-                    navigation.setSelectedItemId(R.id.navigation_dashboard);
+                    navigation.setSelectedItemId(R.id.navigation_sale);
                     break;
                 case 2:
                     navigation.setSelectedItemId(R.id.navigation_notifications);
                     break;
                 case 3:
+                    navigation.setSelectedItemId(R.id.navigation_shop);
+                    break;
+                case 4:
                     navigation.setSelectedItemId(R.id.navigation_settings);
                     break;
             }
@@ -84,5 +102,34 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPageScrollStateChanged(int state) {
         }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        setLocale("fa");
+    }
+
+    public void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Locale locale = new Locale("fa");
+        Locale.setDefault(locale);
+        final Configuration config = new Configuration();
+        config.locale = locale;
+        context = getApplicationContext();
+        Preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        Preferences_fav = PreferenceManager.getDefaultSharedPreferences(context);
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
     }
 }
