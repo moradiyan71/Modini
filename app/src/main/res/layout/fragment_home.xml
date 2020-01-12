@@ -48,9 +48,9 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/cat"
+                    android:id="@+id/catList"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/shabnam"

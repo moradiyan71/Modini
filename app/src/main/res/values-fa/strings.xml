@@ -9,4 +9,17 @@
     <string name="login">ورود کاربر</string>
     <string name="register">ثبت نام کاربر</string>
     <string name="listcategories">لیست کامل</string>
+    <string name="knitwears">پلیور و سویشرت </string>
+    <string name="trouser">شلوار </string>
+    <string name="shirts">پیراهن </string>
+    <string name="bag">کیف </string>
+    <string name="accessories">اکسسوری</string>
+    <string name="coat">کاپشن و پالتو </string>
+    <string name="shoes">کفش </string>
+    <string name="socks">جوراب </string>
+    <string name="sportshoes">کفش ورزشی </string>
+    <string name="suits">کت </string>
+    <string name="underwear">لباس زیر </string>
+    <string name="tshirts">تیشرت</string>
+    <string name="watch">ساعت </string>
 </resources>

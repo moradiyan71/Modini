@@ -73,7 +73,7 @@ public class SplashActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(SplashActivity.this,MainActivity.class);
                 ActivityOptions options =
-                        ActivityOptions.makeCustomAnimation(SplashActivity.this, R.anim.fade_in_activity, R.anim.fade_in_activity);
+                        ActivityOptions.makeCustomAnimation(SplashActivity.this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 startActivity(intent,options.toBundle());
             }
         });

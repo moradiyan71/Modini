@@ -8,5 +8,21 @@
     <string name="listcategories">List All</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="knitwears">knitwears</string>
+    <string name="trouser">trouser</string>
+    <string name="shirts">shirts</string>
+    <string name="tshirts">t-shirts</string>
+    <string name="accessories">accessories</string>
+    <string name="coat">coat and jackets</string>
+    <string name="shoes">shoes</string>
+    <string name="sportshoes">sport shoes</string>
+    <string name="suits">suits</string>
+    <string name="socks">socks</string>
+    <string name="bag">bag</string>
+    <string name="underwear">underwear and homewear</string>
+    <string name="watch">watch</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
