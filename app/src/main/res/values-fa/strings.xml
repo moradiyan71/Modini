@@ -8,4 +8,5 @@
     <string name="categories">دسته بندی</string>
     <string name="login">ورود کاربر</string>
     <string name="register">ثبت نام کاربر</string>
+    <string name="listcategories">لیست کامل</string>
 </resources>

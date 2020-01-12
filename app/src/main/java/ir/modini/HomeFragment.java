@@ -32,20 +32,21 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         List<CategoriesModel> models = new ArrayList<>();
+        models.add(new CategoriesModel(R.drawable.accesories, "اکسسوری"));
+        models.add(new CategoriesModel(R.drawable.sport, "ورزشی"));
         models.add(new CategoriesModel(R.drawable.kids, "پوشاک بچه گانه"));
         models.add(new CategoriesModel(R.drawable.women, "پوشاک زنانه"));
         models.add(new CategoriesModel(R.drawable.men, "پوشاک مردانه"));
         CatgoriesAdapter adapter = new CatgoriesAdapter(models, getActivity());
 
-        ViewPager viewPager = view.findViewById(R.id.viewPager);
+        /*ViewPager viewPager = view.findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
-        viewPager.setPadding(280, 0, 0, 0);
-        viewPager.setCurrentItem(3);
+        viewPager.setPadding(300, 0, 5, 0);
+        viewPager.setCurrentItem(4);*/
 
         ArrayList<String> url_slider = new ArrayList<>();
         url_slider.add("https://mrmdeveloper.ir/images/dorsa-web.jpg");
         url_slider.add("https://mrmdeveloper.ir/images/yenichy-web.jpg");
-        url_slider.add("https://mrmdeveloper.ir/images/Wet-n-Wild-S-981017web.jpg");
         SliderLayout mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
 
         for (int i = 0; i < url_slider.size(); i++) {

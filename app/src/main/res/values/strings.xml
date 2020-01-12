@@ -5,6 +5,7 @@
     <string name="title_settings">Settings</string>
     <string name="title_notifications">Notifications</string>
     <string name="categories">Categories</string>
+    <string name="listcategories">List All</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
 
