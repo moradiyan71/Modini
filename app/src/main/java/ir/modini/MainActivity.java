@@ -1,5 +1,6 @@
 package ir.modini;
 
+import ir.modini.categories.WomenFragment;
 import ir.modini.classes.TabAdapter;
 
 import android.content.Context;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         TabAdapter Adapter = new TabAdapter(fragmentManager);
         //Add All Fragment To List
         Adapter.add(new HomeFragment());
-        Adapter.add(new SaleFragment());
+        Adapter.add(new WomenFragment());
         Adapter.add(new NotificationFragment());
         Adapter.add(new ShopFragment());
         Adapter.add(new SettingFragment());
