@@ -30,13 +30,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     app:cardElevation="3dp"
+                    android:id="@+id/cvPoliver"
                     app:cardUseCompatPadding="true">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/men1" />
+                        android:src="@drawable/men1"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"

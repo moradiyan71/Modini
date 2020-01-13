@@ -2,6 +2,7 @@ package ir.modini.recyclerview;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +23,15 @@ import ir.modini.R;
 public class recProduct extends RecyclerView.Adapter<recProduct.ViewHolder> {
     Context context;
     LayoutInflater inflater;
-    ArrayList<String> title,image;
+    ArrayList<String> name,image,price;
 
 
-    public recProduct(Context context, ArrayList<String> image, ArrayList<String> title) {
+    public recProduct(Context context, ArrayList<String> name, ArrayList<String> price, ArrayList<String> image) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
-        this.title=title;
+        this.name=name;
         this.image=image;
+        this.price=price;
 
     }
 
@@ -44,28 +46,38 @@ public class recProduct extends RecyclerView.Adapter<recProduct.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
 
-        holder.title.setText(title.get(position));
+        holder.name.setText(name.get(position));
+        holder.price.setText(price.get(position));
         Ion.with(context)
                 .load(image.get(position))
                 .intoImageView(holder.img);
+        holder.cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
-        return title.size();
+        return name.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title;
+        TextView name;
         ImageView img;
         CardView cv;
+        TextView price;
         ViewHolder(View itemView) {
             super(itemView);
-            title=(TextView)itemView.findViewById(R.id.txtMen);
-            img=(ImageView) itemView.findViewById(R.id.imgMen);
-            cv=(CardView)itemView.findViewById(R.id.cvMen);
+            name=(TextView)itemView.findViewById(R.id.txtNameProduct);
+            price=(TextView)itemView.findViewById(R.id.txtPrice);
+            img=(ImageView) itemView.findViewById(R.id.imgProduct);
+            cv=(CardView)itemView.findViewById(R.id.cvProduct);
         }
     }
 }

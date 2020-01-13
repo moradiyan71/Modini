@@ -1,38 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvProduct"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:id="@+id/cvMen"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="3dp">
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="3dp"
+        app:cardUseCompatPadding="true">
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgMen"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/women" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/list3" />
+
+                <ImageView
+                    android:id="@+id/imgBrand"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal|end"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/offer" />
+
+            </FrameLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/tusi" />
 
             <TextView
-                android:id="@+id/txtMen"
+                android:id="@+id/txtPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/shabnam"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="13sp"
                 android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/shabnam"
                 android:gravity="end"
-                android:layout_marginEnd="30dp"/>
-        </FrameLayout>
+                android:text="@string/app_name"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNameProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/shabnam"
+                android:gravity="start"
+                android:text="@string/app_name"
+                android:textColor="@color/font"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
 </LinearLayout>
