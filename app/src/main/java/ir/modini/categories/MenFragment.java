@@ -4,7 +4,6 @@ package ir.modini.categories;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import ir.modini.R;
-import ir.modini.recyclerview.recMen;
 
 public class MenFragment extends Fragment {
 
@@ -31,15 +29,15 @@ public class MenFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_men, container, false);
-/*        recMen = view.findViewById(R.id.recMen);
+/*        recProduct = view.findViewById(R.id.recProduct);
         image=new ArrayList<>();
         title=new ArrayList<>();
 
         image.add("https://mrmdeveloper.ir/images/dorsa-web.jpg");
         title.add("کفش مردانه");
 
-        recMen.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recMen.setAdapter(new recMen(getActivity(), image, title));*/
+        recProduct.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recProduct.setAdapter(new recProduct(getActivity(), image, title));*/
         return view;
     }
 

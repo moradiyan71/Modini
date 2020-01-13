@@ -2,7 +2,6 @@ package ir.modini.recyclerview;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,13 +19,13 @@ import java.util.ArrayList;
 import ir.modini.R;
 
 
-public class recMen extends RecyclerView.Adapter<recMen.ViewHolder> {
+public class recProduct extends RecyclerView.Adapter<recProduct.ViewHolder> {
     Context context;
     LayoutInflater inflater;
     ArrayList<String> title,image;
 
 
-    public recMen(Context context, ArrayList<String> image, ArrayList<String> title) {
+    public recProduct(Context context, ArrayList<String> image, ArrayList<String> title) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
         this.title=title;

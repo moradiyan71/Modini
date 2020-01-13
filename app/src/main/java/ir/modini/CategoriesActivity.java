@@ -36,6 +36,7 @@ public class CategoriesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categories);
         getSupportActionBar().hide();
         mTabs = findViewById(R.id.catTab);
+
         mViewPager = findViewById(R.id.vpCat);
         TabFragmentAdapter adapter = new TabFragmentAdapter(getSupportFragmentManager());
         adapter.addFragment(new MenFragment(), "مردانه");

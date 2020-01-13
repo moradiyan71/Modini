@@ -1,5 +1,6 @@
 package ir.modini;
 
+import ir.modini.categories.KidsFragment;
 import ir.modini.categories.WomenFragment;
 import ir.modini.classes.TabAdapter;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         //Add All Fragment To List
         Adapter.add(new HomeFragment());
         Adapter.add(new WomenFragment());
-        Adapter.add(new NotificationFragment());
+        Adapter.add(new KidsFragment());
         Adapter.add(new ShopFragment());
         Adapter.add(new SettingFragment());
         viewPager.setAdapter(Adapter);
