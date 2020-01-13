@@ -1,6 +1,7 @@
 package ir.modini.recyclerview;
 
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -17,7 +18,9 @@ import com.koushikdutta.ion.Ion;
 
 import java.util.ArrayList;
 
+import ir.modini.DetailActivity;
 import ir.modini.R;
+import ir.modini.SplashActivity;
 
 
 public class recProduct extends RecyclerView.Adapter<recProduct.ViewHolder> {
@@ -54,8 +57,10 @@ public class recProduct extends RecyclerView.Adapter<recProduct.ViewHolder> {
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
-
+                Intent intent=new Intent(context, DetailActivity.class);
+                ActivityOptions options =
+                        ActivityOptions.makeCustomAnimation(context, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+                context.startActivity(intent,options.toBundle());
             }
         });
 
