@@ -40,8 +40,9 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'com.daimajia.slider:library:1.1.5@aar'
-    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.koushikdutta.ion:ion:2.2.1'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.irozon.alertview:alertview:1.0.1'
 }

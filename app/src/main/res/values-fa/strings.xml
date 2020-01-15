@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">مدینی</string>
     <string name="title_dashboard">میزکار</string>
@@ -22,4 +22,9 @@
     <string name="underwear">لباس زیر </string>
     <string name="tshirts">تیشرت</string>
     <string name="watch">ساعت </string>
+    <string name="description">توضیحات</string>
+    <string name="property">ویژگی ها</string>
+    <string name="a">ا</string>
+    <string name="size">سایز و تعداد</string>
+    <string name="select_size">انتخاب سایز</string>
 </resources>

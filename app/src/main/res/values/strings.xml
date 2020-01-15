@@ -21,7 +21,10 @@
     <string name="bag">bag</string>
     <string name="underwear">underwear and homewear</string>
     <string name="watch">watch</string>
-
+    <string name="description">description</string>
+    <string name="property">property</string>
+    <string name="size">size</string>
+    <string name="select_size">select size</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
